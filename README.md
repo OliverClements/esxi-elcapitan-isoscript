@@ -19,11 +19,12 @@ For the various folks on various forums that made the bits and pieces of this sc
 p.s. - script needs to be run under sudo.
 
 p.p.s. - if this installer stalls on the VM when first loading (around 75%), you may need to add the following parameters to the VM:
-VM options -> Advanced -> Configuration parameters
 
-`ich7m.present	true
-smc.present	true
-smbios.reflectHost	true`
+`VM options -> Advanced -> Configuration parameters`
+
+`ich7m.present	    true`
+`smc.present	      true`
+`smbios.reflectHost	true`
 
 
 
