@@ -1,8 +1,8 @@
 # Create a VMware ESXi 6+ bootable El Capitan Install .ISO
 
-A basic script to create an .ISO from the 'Install El Capitan' installation App - which is required to use this script - so that it can be used on VMware ESXi servers as a boot/installation medium.
+A basic script to create an .ISO from the 'Install El Capitan' installation App – which is required to use this script – so that it can be used on VMware ESXi servers as a boot/installation medium.
 
-ESXi requires Unlocker 2.0.8 to be installed for this to work.
+ESXi requires Unlocker 2.0.8 to be installed for this to work – http://www.insanelymac.com/forum/files/file/339-unlocker/
 
 # Usage
 
