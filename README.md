@@ -8,9 +8,9 @@ This script is for Mac OS only, and needs to be run under sudo
 
 # Usage
 
-- Download script
-- run `sudo ./make-esxi-elcap.sh
-- 
+Download script
+run `sudo ./make-esxi-elcap.sh
+
 Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop, ready for an ESXi datastore.
 
 # To-Do
