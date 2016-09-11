@@ -26,5 +26,6 @@ p.p.s. - if this installer stalls on the VM when first loading (around 75%), you
 `smc.present	      true`
 `smbios.reflectHost	true`
 
+(from https://idmedia.no/general/installing-os-x-el-capitan-on-esxi/)
 
 
