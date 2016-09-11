@@ -12,8 +12,7 @@ ESXi requires Unlocker 2.0.8 to be installed on the ESXi Server for this to work
 
 # Usage
 
-Download script
-run `$ sudo ./make-esxi-elcap.sh`
+Download script and run `$ sudo ./make-esxi-elcap.sh`
 
 Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop. Make sure you've got at least 20gb free on your system drive for these operations.
 
