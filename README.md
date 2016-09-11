@@ -1,6 +1,8 @@
 # Create a VMware ESXi 6+ bootable El Capitan Install .ISO
 
-A basic script to create an .ISO from the 'Install El Capitan' installation App – which is required to use this script – so that it can be used on VMware ESXi 6+ servers as a boot/installation medium once copied to the ESXi datastore.
+This is the first step in creating a Mac OS VM on an ESXi server (v6+)
+
+This basic script creates an .ISO from the 'Install El Capitan' installation App – which is required to use this script – so that it can be used on VMware ESXi 6+ servers as a boot/installation medium once copied to the ESXi datastore.
 
 ESXi requires Unlocker 2.0.8 to be installed on the ESXi Server for this to work. Details can be found here – http://www.insanelymac.com/forum/files/file/339-unlocker/
 
@@ -11,7 +13,9 @@ This script is for Mac OS only, and needs to be run under sudo.
 Download script
 run `$ sudo ./make-esxi-elcap.sh`
 
-Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop, ready for an ESXi datastore.
+Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop
+
+Copy `ElCapitan.iso` to your ESXi datastore.
 
 Make sure you've got at least 20gb free on your system drive.
 
