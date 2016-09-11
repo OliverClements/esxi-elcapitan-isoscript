@@ -4,9 +4,13 @@ A basic script to create an .ISO from the 'Install El Capitan' installation App 
 
 ESXi requires Unlocker 2.0.8 to be installed for this to work.
 
-# usage
+# Usage
 
 Simply run the script anywhere and watch/wait/make a cup of tea -- eventually an iso will appear on your desktop, ready for an ESXi datastore.
+
+# To-Do
+
+Make the script look a bit better when it's running.
 
 # Thanks
 
