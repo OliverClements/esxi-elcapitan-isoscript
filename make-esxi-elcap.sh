@@ -59,8 +59,11 @@ echo "Remove Package link and replace with actual files"
 echo "----------------------------------------------------------"
 echo "$ rm /Volumes/OS\ X\ Base\ System/System/Installation/Packages"
 rm /Volumes/OS\ X\ Base\ System/System/Installation/Packages
-echo "$ cp -rp /Volumes/install_app/Packages /Volumes/OS\ X\ Base\ System/System/Installation/"
-cp -rp /Volumes/install_app/Packages /Volumes/OS\ X\ Base\ System/System/Installation/
+echo "$ cp -rvp /Volumes/install_app/Packages /Volumes/OS\ X\ Base\ System/System/Installation/"
+echo ""
+echo ""
+cp -rvp /Volumes/install_app/Packages /Volumes/OS\ X\ Base\ System/System/Installation/
+echo ""
 echo ""
 
 
@@ -68,10 +71,13 @@ echo ""
 
 echo "Copy El Capitan installer dependencies"
 echo "----------------------------------------------------------"
-echo "$ cp -rp /Volumes/install_app/BaseSystem.chunklist /Volumes/OS\ X\ Base\ System/BaseSystem.chunklist"
-cp -rp /Volumes/install_app/BaseSystem.chunklist /Volumes/OS\ X\ Base\ System/BaseSystem.chunklist
-echo "$ cp -rp /Volumes/install_app/BaseSystem.dmg /Volumes/OS\ X\ Base\ System/BaseSystem.dmg"
-cp -rp /Volumes/install_app/BaseSystem.dmg /Volumes/OS\ X\ Base\ System/BaseSystem.dmg
+echo "$ cp -rvp /Volumes/install_app/BaseSystem.chunklist /Volumes/OS\ X\ Base\ System/BaseSystem.chunklist"
+echo ""
+cp -rvp /Volumes/install_app/BaseSystem.chunklist /Volumes/OS\ X\ Base\ System/BaseSystem.chunklist
+echo ""
+echo "$ cp -rvp /Volumes/install_app/BaseSystem.dmg /Volumes/OS\ X\ Base\ System/BaseSystem.dmg"
+echo ""
+cp -rvp /Volumes/install_app/BaseSystem.dmg /Volumes/OS\ X\ Base\ System/BaseSystem.dmg
 echo ""
 
  
