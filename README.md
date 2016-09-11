@@ -13,6 +13,8 @@ run `$ sudo ./make-esxi-elcap.sh`
 
 Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop, ready for an ESXi datastore.
 
+Make sure you've got at least 20gb free on your system drive.
+
 # To-Do
 
 Figure out a better way to present user feedback because I am terrible at shell scripting
