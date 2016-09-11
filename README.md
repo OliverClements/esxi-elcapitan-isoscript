@@ -12,7 +12,9 @@ ESXi requires *Unlocker 2.0.8* to be installed on the ESXi Server for this to wo
 
 Download script and run `$ sudo ./make-esxi-elcap.sh`
 
-Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop. Make sure you've got at least 20gb free on your system drive for these operations (the temporary volumes are deleted later).
+Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually `ElCapitan.iso` will appear on your desktop. 
+
+*n.b Make sure you've got at least 20gb free on your system drive for these operations (the temporary volumes are deleted later, freeing up the space used).*
 
 Once finished, copy `ElCapitan.iso` to your ESXi datastore.
 
