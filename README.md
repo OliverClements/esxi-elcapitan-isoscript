@@ -2,11 +2,13 @@
 
 This is the first step in creating a Mac OS VM on an ESXi server (v6+)
 
+This script is for Mac OS only, and needs to be run under sudo. `Install El Capitan` also needs to be downloaded and present in your `/Applications` directory. It can be acquired from the Mac App Store.
+
 This basic script creates an .ISO from the 'Install El Capitan' installation App – which is required to use this script – so that it can be used on VMware ESXi 6+ servers as a boot/installation medium once copied to the ESXi datastore.
 
 ESXi requires Unlocker 2.0.8 to be installed on the ESXi Server for this to work. Details can be found here – http://www.insanelymac.com/forum/files/file/339-unlocker/
 
-This script is for Mac OS only, and needs to be run under sudo.
+
 
 # Usage
 
