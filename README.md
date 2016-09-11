@@ -10,7 +10,7 @@ Simply run the script anywhere and watch/wait/make a cup of tea -- eventually an
 
 # To-Do
 
-Make the script look a bit better when it's running.
+Figure out a better way to present user feedback because I am terrible at shell scripting
 
 # Thanks
 
