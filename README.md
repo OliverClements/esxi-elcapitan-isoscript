@@ -13,13 +13,11 @@ This script is for Mac OS only, and needs to be run under sudo.
 Download script
 run `$ sudo ./make-esxi-elcap.sh`
 
-Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop
+Run the script anywhere and watch/wait/make a cup of tea (it takes about 10 minutes) – eventually an iso will appear on your desktop. Make sure you've got at least 20gb free on your system drive for these operations.
 
-Copy `ElCapitan.iso` to your ESXi datastore.
+Once finished, copy `ElCapitan.iso` to your ESXi datastore.
 
-Make sure you've got at least 20gb free on your system drive.
-
-# To-Do
+# TODO
 
 Figure out a better way to present user feedback because I am terrible at shell scripting
 
@@ -28,6 +26,7 @@ Figure out a better way to present user feedback because I am terrible at shell 
 For the various folks on various forums that made the bits and pieces of this script. Here specifically: http://www.insanelymac.com/forum/topic/308533-how-to-create-a-bootable-el-capitan-iso-fo-vmware/
 
 # VM Installation Issues
+
 If this installer stalls on the VM when first loading (around 75%), you may need to add the following parameters to the VM:
 
 `VM options -> Advanced -> Configuration parameters`
