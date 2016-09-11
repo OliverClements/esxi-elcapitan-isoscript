@@ -14,8 +14,16 @@ Figure out a better way to present user feedback because I am terrible at shell 
 
 # Thanks
 
-For the various folks on various forums that made the bits and pieces of this script. Had to do a fair amount of mixing and matching to get it to work successfully.
+For the various folks on various forums that made the bits and pieces of this script. Here specifically: http://www.insanelymac.com/forum/topic/308533-how-to-create-a-bootable-el-capitan-iso-fo-vmware/
 
 p.s. - script needs to be run under sudo.
+
+p.p.s. - if this installer stalls on the VM when first loading (around 75%), you may need to add the following parameters to the VM:
+VM options -> Advanced -> Configuration parameters
+
+`ich7m.present	true
+smc.present	true
+smbios.reflectHost	true`
+
 
 
