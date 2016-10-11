@@ -1,7 +1,7 @@
 #!/bin/bash
-
+clear
 echo "----------------------------------------"
-echo "EL CAPITAN ISO GENERATOR FOR VMWARE ESXi"
+echo "macosSierra ISO GENERATOR FOR VMWARE ESXi"
 echo "----------------------------------------"
 
 echo ""
@@ -17,33 +17,33 @@ echo ""
 echo "Let's go!"
 echo ""
 
-# Mount the installer image from the El Capitan Install App
+# Mount the installer image from the macOS Sierra Install App
 
-echo "Mount the installer image from the El Capitan Install App"
+echo "Mount the installer image from the macOS Sierra Install App"
 echo "----------------------------------------------------------"
 echo ""
-hdiutil attach /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/SharedSupport/InstallESD.dmg -noverify -nobrowse -mountpoint /Volumes/install_app
+hdiutil attach /Applications/Install\ macOS\ Sierra.app//Contents/SharedSupport/InstallESD.dmg -noverify -nobrowse -mountpoint /Volumes/install_app
 echo ""
 
 
-# Create the El Capitan Blank ISO Image of 8500mb with a Single Partition - Apple Partition Map
+# Create the macOS Sierra Blank ISO Image of 8500mb with a Single Partition - Apple Partition Map
 
-echo "Create the El Capitan Blank ISO Image of 8500mb with a Single Partition - Apple Partition Map"
+echo "Create the macOS Sierra Blank ISO Image of 8500mb with a Single Partition - Apple Partition Map"
 echo "----------------------------------------------------------"
 echo ""
-hdiutil create -o /tmp/ElCapitan -size 8500m -layout SPUD -fs HFS+J -type SPARSE
+hdiutil create -o /tmp/macosSierra -size 8500m -layout SPUD -fs HFS+J -type SPARSE
 echo ""
 
-# Mount the El Capitan Blank ISO Image
+# Mount the macOS Sierra Blank ISO Image
 
-echo "Mount the El Capitan Blank ISO Image"
+echo "Mount the macOS Sierra Blank ISO Image"
 echo "----------------------------------------------------------"
 echo ""
-hdiutil attach /tmp/ElCapitan.sparseimage -noverify -nobrowse -mountpoint /Volumes/install_build
+hdiutil attach /tmp/macosSierra.sparseimage -noverify -nobrowse -mountpoint /Volumes/install_build
 echo ""
 
-# Restore the Base System into the ElCapitan Blank ISO Image
-echo "Restore the Base System into the ElCapitan Blank ISO Image"
+# Restore the Base System into the macosSierra Blank ISO Image
+echo "Restore the Base System into the macosSierra Blank ISO Image"
 echo "----------------------------------------------------------"
 echo ""
 asr restore -source /Volumes/install_app/BaseSystem.dmg -target /Volumes/install_build -noprompt -noverify -erase
@@ -55,18 +55,14 @@ echo "Remove Package link and replace with actual files"
 echo "----------------------------------------------------------"
 echo ""
 rm /Volumes/OS\ X\ Base\ System/System/Installation/Packages
-
 echo ""
 cp -rvp /Volumes/install_app/Packages /Volumes/OS\ X\ Base\ System/System/Installation/
 echo ""
 
+# Copy macOS Sierra installer dependencies
 
-
-# Copy El Capitan installer dependencies
-
-echo "Copy El Capitan installer dependencies"
+echo "Copy macOS Sierra installer dependencies"
 echo "----------------------------------------------------------"
-
 echo ""
 cp -rvp /Volumes/install_app/BaseSystem.chunklist /Volumes/OS\ X\ Base\ System/BaseSystem.chunklist
 echo ""
@@ -83,32 +79,32 @@ hdiutil detach /Volumes/install_app
 echo ""
 
   
-# Unmount the ElCapitan ISO Image
+# Unmount the macosSierra ISO Image
 
-echo "Unmount the ElCapitan ISO Image"
+echo "Unmount the macosSierra ISO Image"
 echo "----------------------------------------------------------"
 echo ""
 hdiutil detach /Volumes/OS\ X\ Base\ System/
 echo ""
 
 # Not quite sure what this does, removing for now.
-## hdiutil resize -size `hdiutil resize -limits /tmp/ElCapitan.sparseimage | tail -n 1 | awk '{ print $1 }'`b /tmp/ElCapitan.sparseimage
+hdiutil resize -size `hdiutil resize -limits /tmp/macosSierra.sparseimage | tail -n 1 | awk '{ print $1 }'`b /tmp/macosSierra.sparseimage
  
-# Convert the ElCapitan ISO Image to ISO/CD master
+# Convert the macosSierra ISO Image to ISO/CD master
 
 echo "Convert the ElCapitan ISO Image to ISO/CD master"
 echo "----------------------------------------------------------"
 echo ""
-hdiutil convert /tmp/ElCapitan.sparseimage -format UDTO -o /tmp/ElCapitan.iso
+hdiutil convert /tmp/macosSierra.sparseimage -format UDTO -o /tmp/macosSierra.iso
 echo ""
 
 
-# Rename the El Capitan ISO Image and move it to the desktop
+# Rename the macOS Sierra ISO Image and move it to the desktop
 
-echo "Rename the El Capitan ISO Image and move it to the desktop"
+echo "Rename the macOS Sierra ISO Image and move it to the desktop"
 echo "----------------------------------------------------------"
 echo ""
-mv -v /tmp/ElCapitan.iso.cdr ~/Desktop/ElCapitan.iso
+mv -v /tmp/macosSierra.iso.cdr ~/Desktop/macosSierra.iso
 echo ""
 
 
@@ -116,7 +112,7 @@ echo ""
 echo "Clean up - delete sparseimage if it still exists."
 echo "----------------------------------------------------------"
 echo ""
-rm /tmp/ElCapitan.sparseimage
+rm /tmp/macosSierra.sparseimage
 echo ""
 echo "----------------------------------------------------------"
 echo "All operations complete!"
