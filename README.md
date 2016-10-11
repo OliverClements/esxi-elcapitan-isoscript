@@ -1,4 +1,4 @@
-# Create a VMware ESXi 6+ bootable El Capitan Install .ISO
+# Create a VMware ESXi 6+ bootable El Capitan / macOS Sierra Install .ISO
 
 This is the first step in creating a Mac OS VM on an ESXi server (v6+)
 
