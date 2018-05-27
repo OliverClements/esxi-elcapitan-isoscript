@@ -31,7 +31,7 @@ echo ""
 echo "Create the macOS High Sierra Blank ISO Image of 8500mb with a Single Partition - Apple Partition Map"
 echo "----------------------------------------------------------"
 echo ""
-hdiutil create -o /tmp/macosHigh Sierra -size 8500m -layout SPUD -fs HFS+J -type SPARSE
+hdiutil create -o /tmp/macosHighSierra -size 8500m -layout SPUD -fs HFS+J -type SPARSE
 echo ""
 
 # Mount the macOS High Sierra Blank ISO Image
@@ -39,7 +39,7 @@ echo ""
 echo "Mount the macOS High Sierra Blank ISO Image"
 echo "----------------------------------------------------------"
 echo ""
-hdiutil attach /tmp/macosHigh Sierra.sparseimage -noverify -nobrowse -mountpoint /Volumes/install_build
+hdiutil attach /tmp/macosHighSierra.sparseimage -noverify -nobrowse -mountpoint /Volumes/install_build
 echo ""
 
 # Restore the Base System into the macosHigh Sierra Blank ISO Image
